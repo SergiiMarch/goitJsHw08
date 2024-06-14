@@ -12,26 +12,30 @@
 } */
 
 .gallery {
-  width: 1440px; /* Ширина контейнера */
-  height: 848px; /* Висота контейнера */
+  width: 1440px;
+  height: 848px;
   display: flex;
-  flex-wrap: wrap; /* Дозволяє елементам переноситись на новий рядок */
-  justify-content: space-between; /* Розподіляє елементи по горизонталі з проміжками між ними */
-  gap: 10px; /* Відстань між елементами */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 24px 156px;
+  list-style: none;
   padding: 0;
-  list-style: none; /* Видаляє маркери списку */
   background-color: #fff;
 }
 
 .gallery-item {
   width: calc(33.333% - 10px);
-  margin-bottom: 10px;
 }
 
 .gallery-image {
   width: 100%;
   height: auto;
   display: block;
+  border: none;
+
+  /* width: 360px; */
+  /* height: 200px; */
 }
 /* .gallery-link {
   display: block; 
