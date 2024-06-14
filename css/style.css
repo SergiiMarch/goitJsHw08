@@ -1,0 +1,39 @@
+/* .gallery {
+  width: 1440px;
+  height: 848px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0px;
+  list-style: none;
+
+  background-color: #fff;
+} */
+
+.gallery {
+  width: 1440px; /* Ширина контейнера */
+  height: 848px; /* Висота контейнера */
+  display: flex;
+  flex-wrap: wrap; /* Дозволяє елементам переноситись на новий рядок */
+  justify-content: space-between; /* Розподіляє елементи по горизонталі з проміжками між ними */
+  gap: 10px; /* Відстань між елементами */
+  padding: 0;
+  list-style: none; /* Видаляє маркери списку */
+  background-color: #fff;
+}
+
+.gallery-item {
+  width: calc(33.333% - 10px);
+  margin-bottom: 10px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* .gallery-link {
+  display: block; 
+  text-align: center; 
+} */

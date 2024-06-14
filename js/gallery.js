@@ -76,7 +76,6 @@ function createElement(arr) {
       src="${preview}"
       data-source="large-image.jpg"
       alt="${description}"
-      width=360px
     />
   </a>
 </li> `
