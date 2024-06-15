@@ -100,4 +100,8 @@ function handlerClick(e) {
   instance.show();
 }
 
-console.log(basicLightbox);
+ulEl.addEventListener("keydown", (e) => {
+  if (e.code === "Escape") {
+    instance.close();
+  }
+});
