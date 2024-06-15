@@ -74,7 +74,7 @@ function createElement(arr) {
     <img
       class="gallery-image"
       src="${preview}"
-      data-source="large-image.jpg"
+      data-source="${original}"
       alt="${description}"
     />
   </a>
@@ -84,3 +84,20 @@ function createElement(arr) {
 }
 const galleryMarkup = createElement(images);
 ulEl.insertAdjacentHTML("beforeend", galleryMarkup);
+ulEl.addEventListener("click", handlerClick);
+
+function handlerClick(e) {
+  e.preventDefault();
+  if (e.target.nodeName !== "IMG") {
+    return;
+  }
+  const originalCard = e.target.dataset.source;
+
+  const instance = basicLightbox.create(`
+    <img src="${originalCard}" width="800" height="600">
+`);
+
+  instance.show();
+}
+
+console.log(basicLightbox);
