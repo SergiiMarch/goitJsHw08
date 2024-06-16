@@ -84,7 +84,10 @@ function createElement(arr) {
 }
 const galleryMarkup = createElement(images);
 ulEl.insertAdjacentHTML("beforeend", galleryMarkup);
+
 ulEl.addEventListener("click", handlerClick);
+
+let instance = "";
 
 function handlerClick(e) {
   e.preventDefault();
@@ -93,15 +96,19 @@ function handlerClick(e) {
   }
   const originalCard = e.target.dataset.source;
 
-  const instance = basicLightbox.create(`
-    <img src="${originalCard}" width="800" height="600">
+  instance = basicLightbox.create(`
+  <li class=js-modal>
+  <img src="${originalCard}" width="1100" height="640">
+  </li>
+   
 `);
 
   instance.show();
 }
 
-ulEl.addEventListener("keydown", (e) => {
+document.addEventListener("keydown", handlerClickClose);
+function handlerClickClose(e) {
   if (e.code === "Escape") {
     instance.close();
   }
-});
+}

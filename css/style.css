@@ -33,7 +33,11 @@
   height: auto;
   display: block;
 }
-/* .gallery-link {
-  display: block; 
-  text-align: center; 
-} */
+.js-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(46, 47, 66, 0.8);
+  width: 1440px;
+  height: 696px;
+}
